@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node example.js",
-    "test": "jest --watch --coverage"
+    "test": "jest --coverage"
   },
   "keywords": [],
   "author": "",
