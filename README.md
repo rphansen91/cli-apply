@@ -1,5 +1,10 @@
 # CLI Apply
 
+[![Travis Build](https://img.shields.io/travis/rphansen91/cli-apply.svg?style=flat-square)](https://travis-ci.org/rphansen91/cli-apply)
+[![Codecov](https://img.shields.io/codecov/c/github/rphansen91/cli-apply.svg?style=flat-square)](https://codecov.io/gh/rphansen91/cli-apply)
+[![npm](https://img.shields.io/npm/v/cli-apply.svg?style=flat-square)](https://www.npmjs.com/package/cli-apply)
+[![downloads](https://img.shields.io/npm/dw/cli-apply.svg?style=flat-square)](https://www.npmjs.com/package/cli-apply)
+
 ## Description
 
 CLI Apply is a simple way to create node applications that can be executed and interfaced with using the command line.
