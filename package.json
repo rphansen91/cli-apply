@@ -1,6 +1,6 @@
 {
   "name": "cli-apply",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "CLI Apply is a simple way to create node applications that can be executed and interfaced with using the command line.",
   "main": "index.js",
   "scripts": {
