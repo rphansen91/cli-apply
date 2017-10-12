@@ -1,0 +1,20 @@
+{
+  "name": "cli-apply",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node example.js",
+    "test": "jest --watch --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^3.2.2"
+  },
+  "devDependencies": {
+    "jest": "^21.2.1",
+    "testcheck": "^1.0.0-rc.2"
+  }
+}
