@@ -1,14 +1,14 @@
 {
   "name": "cli-apply",
-  "version": "1.0.2",
-  "description": "",
+  "version": "1.0.3",
+  "description": "CLI Apply is a simple way to create node applications that can be executed and interfaced with using the command line.",
   "main": "index.js",
   "scripts": {
     "start": "node example.js",
     "test": "jest --coverage"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["cli", "node", "deploy", "build"],
+  "author": "Ryan P. Hansen",
   "license": "ISC",
   "dependencies": {
     "inquirer": "^3.2.2"
@@ -16,5 +16,12 @@
   "devDependencies": {
     "jest": "^21.2.1",
     "testcheck": "^1.0.0-rc.2"
+  },
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/rphansen91/cli-apply.git"
+  },
+  "bugs": {
+    "url" : "https://github.com/rphansen91/cli-apply/issues"
   }
 }
