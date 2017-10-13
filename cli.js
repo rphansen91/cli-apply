@@ -38,7 +38,7 @@ module.exports = function (prompt) {
     .then(method => {
       if (!isFn(method)) return CLIApply(method, opts)
 
-      return prompt([selectArgs(options.args, mod)])
+      return prompt([selectArgs(options.args)])
       .then(({ args }) => parser(args, []))
       .then(args => toArray(args))
       .then(args => method.apply(mod, args))

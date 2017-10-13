@@ -1,4 +1,4 @@
-module.exports = function parser (str, def) {
+module.exports = function parser (str) {
   return new Promise((res, rej) => {
     try {
       res(eval(str))
