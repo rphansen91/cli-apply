@@ -1,11 +1,12 @@
 {
   "name": "cli-apply",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "CLI Apply is a simple way to create node applications that can be executed and interfaced with using the command line.",
   "main": "index.js",
   "scripts": {
     "start": "node example.js",
-    "test": "jest --coverage --watch"
+    "test": "jest --coverage",
+    "test:watch": "jest --coverage --watch"
   },
   "keywords": [
     "cli",
