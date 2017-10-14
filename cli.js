@@ -1,6 +1,16 @@
+const getArguments = require('es-arguments')
+const glamlog = require('glamlog')
 const parser = require('./utils/parse')
 const toArray = require('./utils/toArray')
 const defaultOpts = require('./options')
+const green = color('green')
+const blue = color('blue')
+
+function color (c) {
+  return function (str) {
+    return glamlog.style(str, c)
+  }
+}
 
 function isFn (fn, cb) {
   return typeof fn === 'function'
@@ -23,6 +33,12 @@ function selectArgs (message) {
   }
 }
 
+function displaySignature (name, fn) {
+  return blue(name) + ' (' + getArguments(fn)
+  .map(green)
+  .join(', ') + ')'
+}
+
 module.exports = function (prompt) {
   if (!isFn(prompt)) throw new Error('Must supply a valid prompt method')
 
@@ -34,14 +50,17 @@ module.exports = function (prompt) {
       if (!mod) throw new Error('Must supply a valid module')
       return prompt([selectMethod(options.method, mod)])
     })
-    .then(({ method }) => mod[method])
-    .then(method => {
-      if (!isFn(method)) return CLIApply(method, opts)
+    .then(({ method }) => {
+      const fn = mod[method]
+
+      if (!isFn(fn)) return CLIApply(fn, opts)
+
+      glamlog(displaySignature(method, fn))
 
       return prompt([selectArgs(options.args)])
       .then(({ args }) => parser(args, []))
       .then(args => toArray(args))
-      .then(args => method.apply(mod, args))
+      .then(args => fn.apply(mod, args))
     })
     .then(res => {
       if (options.logging) console.log(res)
