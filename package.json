@@ -1,6 +1,6 @@
 {
   "name": "cli-apply",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "CLI Apply is a simple way to create node applications that can be executed and interfaced with using the command line.",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,7 @@
   "author": "Ryan P. Hansen",
   "license": "ISC",
   "dependencies": {
-    "es-arguments": "^1.0.1",
+    "es-arguments": "^1.0.2",
     "glamlog": "^1.1.1",
     "inquirer": "^3.2.2",
     "recast": "^0.12.7"
